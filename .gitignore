@@ -1,0 +1,8 @@
+.idea/
+/log
+target/
+.settings/
+
+.project
+.classpath
+/mastermind-sergio-garcia-natalia-casanova.iml
