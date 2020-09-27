@@ -12,7 +12,7 @@ public class FeedBackAction extends Action {
         this.getBoard().calculateFeedBack();
         this.getBoard().write();
         if (getBoard().playerWin())
-             this.setState(State.WINED);
+             this.setState(State.WON);
         else if (getBoard().ifFinished())
             this.setState(State.LOSE);
         else {

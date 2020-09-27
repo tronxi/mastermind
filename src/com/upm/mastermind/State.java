@@ -2,8 +2,8 @@ package com.upm.mastermind;
 
 public enum State {
     INITIAL,
-    WINED,
-    LOSE,
+    WON,
+    LOST,
     IN_GAME,
     PENDING_FEEDBACK,
     EXIT

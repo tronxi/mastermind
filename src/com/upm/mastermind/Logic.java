@@ -24,7 +24,7 @@ public class Logic {
                 return putPatternAction;
             case PENDING_FEEDBACK:
                 return feedBackAction;
-            case WINED:
+            case WON:
             case LOSE:
                 return resumeAction;
             case EXIT:
