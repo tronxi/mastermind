@@ -15,7 +15,9 @@ public class FeedBackAction extends Action {
              this.setState(State.WINED);
         else if (getBoard().ifFinished())
             this.setState(State.LOSE);
-        else this.setState(State.IN_GAME);
-        this.getBoard().advanceAttempts();
+        else {
+            this.setState(State.IN_GAME);
+            this.getBoard().advanceAttempts();
+        }
     }
 }

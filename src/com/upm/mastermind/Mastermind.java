@@ -6,7 +6,7 @@ public class Mastermind {
         Logic logic = new Logic();
         Action action;
         do {
-            action = logic.getController();
+            action = logic.getAction();
 
             if(action != null) {
                 action.execute();

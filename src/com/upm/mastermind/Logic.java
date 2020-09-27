@@ -16,7 +16,7 @@ public class Logic {
         resumeAction = new ResumeAction(session);
     }
 
-    public Action getController() {
+    public Action getAction() {
         switch (this.session.getState()){
             case INITIAL:
                 return makePatternAction;

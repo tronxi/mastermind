@@ -16,7 +16,7 @@ public class PatternCodePeg {
         boolean error;
         do {
             readValidCombination();
-            error = isRepeated(this.pattern);
+            error = isRepeated();
             if(error) {
                 Error.REPEATED_CODE_PEG_PATTERN.writeln();
             }
@@ -55,7 +55,7 @@ public class PatternCodePeg {
         return patternString.toUpperCase().toCharArray();
     }
 
-    private boolean isRepeated(CodePeg[] pattern) {
+    private boolean isRepeated() {
         for (int i = 0; i < Row.SIZE; i++) {
             for (int j = 0; j < Row.SIZE; j++) {
                 if (i != j) {
@@ -73,7 +73,7 @@ public class PatternCodePeg {
             for (int i = 0; i < Row.SIZE; i++) {
                 this.pattern[i] = CodePeg.random();
             }
-        } while (isRepeated(this.pattern));
+        } while (isRepeated());
     }
 
     public CodePeg[] getPattern() {
