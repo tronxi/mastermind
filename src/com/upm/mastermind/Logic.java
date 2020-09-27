@@ -25,7 +25,7 @@ public class Logic {
             case PENDING_FEEDBACK:
                 return feedBackAction;
             case WON:
-            case LOSE:
+            case LOST:
                 return resumeAction;
             case EXIT:
             default:

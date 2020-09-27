@@ -10,7 +10,7 @@ public class ResumeAction extends Action{
 
     @Override
     public void execute() {
-        assert this.getState() == State.LOSE || this.getState() == State.WON;
+        assert this.getState() == State.LOST || this.getState() == State.WON;
         printState(this.getState());
 
         if (isResumedGame()) {
@@ -26,7 +26,7 @@ public class ResumeAction extends Action{
             case WON:
                 Message.PLAYER_WIN.writeln();
                 break;
-            case LOSE:
+            case LOST:
                 Message.PLAYER_LOSE.writeln();
         }
     }
