@@ -11,9 +11,9 @@ public class Board {
     private int actualAttempt;
 
     public Board() {
-        secret = new PatternCodePeg();
-        attempts = new Row[MAX_ATTEMPTS];
-        actualAttempt = 0;
+        this.secret = new PatternCodePeg();
+        this.attempts = new Row[MAX_ATTEMPTS];
+        this.actualAttempt = 0;
     }
 
     public boolean ifFinished() {
@@ -25,15 +25,15 @@ public class Board {
     }
 
     public void advanceAttempts() {
-        this.actualAttempt++;
+        actualAttempt++;
     }
 
     public void generateSecret() {
-        this.secret.random();
+        secret.random();
     }
 
     public void calculateFeedBack() {
-        this.attempts[actualAttempt].calculateFeedBack(this.secret);
+        attempts[actualAttempt].calculateFeedBack(secret);
     }
 
     public void putPatternCodePeg(PatternCodePeg patternCodePeg) {
@@ -44,7 +44,7 @@ public class Board {
 
     public void write() {
         Console.instance().writeln(String.format(Message.ATTEMPTS.toString(), actualAttempt + 1));
-        this.secret.write();
+        secret.write();
         Message.SECRET.writeln();
         for(int i = 0; i <= actualAttempt; i++) {
             attempts[i].write();

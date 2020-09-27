@@ -27,21 +27,21 @@ public class PatternCodePeg {
         boolean error;
         do {
             error = false;
-            char[] patternString = readWithCorrectLength();
+            String patternString = readWithCorrectLength();
             int i = 0;
             do {
-                if (CodePeg.containInitial(patternString[i])) {
-                    pattern[i] = CodePeg.valueOf(String.valueOf(patternString[i]));
+                if (CodePeg.containInitial(patternString.charAt(i))) {
+                    pattern[i] = CodePeg.valueOf(String.valueOf(patternString.charAt(i)));
                     i++;
                 } else {
                     error = true;
                     Error.BAD_COMBINATION_CODE_PEG_PATTERN.writeln();
                 }
-            } while (!error && i < patternString.length);
+            } while (!error && i < patternString.length());
         } while (error);
     }
 
-    private char[] readWithCorrectLength() {
+    private String readWithCorrectLength() {
         Console console = Console.instance();
         String patternString;
         boolean error;
@@ -52,16 +52,14 @@ public class PatternCodePeg {
                 Error.BAD_LONG_CODE_PEG_PATTERN.writeln();
             }
         } while (error);
-        return patternString.toUpperCase().toCharArray();
+        return patternString.toUpperCase();
     }
 
     private boolean isRepeated() {
         for (int i = 0; i < Row.SIZE; i++) {
             for (int j = 0; j < Row.SIZE; j++) {
-                if (i != j) {
-                    if (pattern[i].equals(pattern[j])) {
-                        return true;
-                    }
+                if (i != j && pattern[i].equals(pattern[j])) {
+                    return true;
                 }
             }
         }

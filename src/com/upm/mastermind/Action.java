@@ -10,19 +10,19 @@ public abstract class Action {
     }
 
     protected Board getBoard() {
-        return this.session.getBoard();
+        return session.getBoard();
     }
 
     protected void setBoard(Board board) {
-        this.session.setBoard(board);
+        session.setBoard(board);
     }
 
     protected State getState() {
-        return this.session.getState();
+        return session.getState();
     }
 
     protected void setState(State state) {
-        this.session.setState(state);
+        session.setState(state);
     }
 
     public abstract void execute();

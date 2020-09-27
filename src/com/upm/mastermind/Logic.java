@@ -10,14 +10,14 @@ public class Logic {
 
     public Logic() {
         this.session = new Session();
-        feedBackAction = new FeedBackAction(session);
-        makePatternAction = new MakePatternCodePegAction(session);
-        putPatternAction = new PutPatternCodePegAction(session);
-        resumeAction = new ResumeAction(session);
+        this.feedBackAction = new FeedBackAction(session);
+        this.makePatternAction = new MakePatternCodePegAction(session);
+        this.putPatternAction = new PutPatternCodePegAction(session);
+        this.resumeAction = new ResumeAction(session);
     }
 
     public Action getAction() {
-        switch (this.session.getState()){
+        switch (session.getState()){
             case INITIAL:
                 return makePatternAction;
             case IN_GAME:
