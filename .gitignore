@@ -6,3 +6,4 @@ target/
 .project
 .classpath
 /mastermind-sergio-garcia-natalia-casanova.iml
+out/
