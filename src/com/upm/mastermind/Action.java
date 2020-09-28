@@ -2,27 +2,27 @@ package com.upm.mastermind;
 
 public abstract class Action {
 
-    protected Session session;
+    private final Game game;
 
-    public Action(Session session) {
-        assert session != null;
-        this.session = session;
+    public Action(Game game) {
+        assert game != null;
+        this.game = game;
     }
 
     protected Board getBoard() {
-        return session.getBoard();
+        return game.getBoard();
     }
 
     protected void setBoard(Board board) {
-        session.setBoard(board);
+        game.setBoard(board);
     }
 
     protected State getState() {
-        return session.getState();
+        return game.getState();
     }
 
     protected void setState(State state) {
-        session.setState(state);
+        game.setState(state);
     }
 
     public abstract void execute();

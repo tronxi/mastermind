@@ -1,10 +1,10 @@
 package com.upm.mastermind;
 
-public class Session {
+public class Game {
     private Board board;
     private State state;
 
-    public Session() {
+    public Game() {
         this.board = new Board();
         this.state = State.INITIAL;
     }

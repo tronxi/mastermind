@@ -2,8 +2,8 @@ package com.upm.mastermind;
 
 public class MakePatternCodePegAction extends Action {
 
-    public MakePatternCodePegAction(Session session) {
-        super(session);
+    public MakePatternCodePegAction(Game game) {
+        super(game);
     }
 
     @Override

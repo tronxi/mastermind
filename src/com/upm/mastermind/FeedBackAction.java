@@ -2,8 +2,8 @@ package com.upm.mastermind;
 
 public class FeedBackAction extends Action {
 
-    public FeedBackAction(Session session) {
-        super(session);
+    public FeedBackAction(Game game) {
+        super(game);
     }
 
     @Override

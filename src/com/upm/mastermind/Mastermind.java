@@ -15,8 +15,6 @@ public class Mastermind {
         } while (action != null);
     }
 
-
-
     public static void main(String[] args) {
 	    new Mastermind().play();
     }

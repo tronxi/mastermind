@@ -2,10 +2,10 @@ package com.upm.mastermind;
 
 import com.upm.utils.YesNoDialog;
 
-public class ResumeAction extends Action{
+public class ResumeAction extends Action {
 
-    public ResumeAction(Session session) {
-        super(session);
+    public ResumeAction(Game game) {
+        super(game);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class ResumeAction extends Action{
         }
     }
 
-    private boolean isResumedGame(){
+    private boolean isResumedGame() {
         return new YesNoDialog().read(Message.RESUME.toString());
     }
 
