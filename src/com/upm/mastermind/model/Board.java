@@ -1,4 +1,4 @@
-package com.upm.mastermind;
+package com.upm.mastermind.model;
 
 import com.upm.utils.Console;
 
@@ -46,9 +46,18 @@ public class Board {
         Console.instance().writeln(String.format(Message.ATTEMPTS.toString(), actualAttempt + 1));
         secret.write();
         Message.SECRET.writeln();
-        for(int i = 0; i <= actualAttempt; i++) {
+        for (int i = 0; i <= actualAttempt; i++) {
             attempts[i].write();
         }
         Message.SEPARATOR.writeln();
+    }
+
+    //methods for view
+    public int getActualAttempt() {
+        return actualAttempt;
+    }
+
+    public Row getRow(int i) {
+        return attempts[i];
     }
 }

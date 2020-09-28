@@ -1,8 +1,12 @@
-package com.upm.mastermind;
+package com.upm.mastermind.controller;
 
-public class PutPatternCodePegAction extends Action {
+import com.upm.mastermind.model.Game;
+import com.upm.mastermind.model.PatternCodePeg;
+import com.upm.mastermind.model.State;
 
-    public PutPatternCodePegAction(Game game) {
+public class PutPatternCodePegController extends Controller {
+
+    public PutPatternCodePegController(Game game) {
         super(game);
     }
 

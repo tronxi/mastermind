@@ -1,15 +1,19 @@
-package com.upm.mastermind;
+package com.upm.mastermind.controller;
 
-public abstract class Action {
+import com.upm.mastermind.model.Board;
+import com.upm.mastermind.model.Game;
+import com.upm.mastermind.model.State;
+
+public abstract class Controller {
 
     private final Game game;
 
-    public Action(Game game) {
+    public Controller(Game game) {
         assert game != null;
         this.game = game;
     }
 
-    protected Board getBoard() {
+    public Board getBoard() {
         return game.getBoard();
     }
 

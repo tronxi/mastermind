@@ -1,4 +1,4 @@
-package com.upm.mastermind;
+package com.upm.mastermind.model;
 
 import com.upm.utils.Console;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class PatternCodePeg {
 
-    private final CodePeg [] pattern;
+    private final CodePeg[] pattern;
 
     public PatternCodePeg() {
         this.pattern = new CodePeg[Row.SIZE];
@@ -18,7 +18,7 @@ public class PatternCodePeg {
             readValidCombination();
             error = isRepeated();
             if(error) {
-                Error.REPEATED_CODE_PEG_PATTERN.writeln();
+                com.upm.mastermind.model.Error.REPEATED_CODE_PEG_PATTERN.writeln();
             }
         } while (error);
     }
@@ -35,7 +35,7 @@ public class PatternCodePeg {
                     i++;
                 } else {
                     error = true;
-                    Error.BAD_COMBINATION_CODE_PEG_PATTERN.writeln();
+                    com.upm.mastermind.model.Error.BAD_COMBINATION_CODE_PEG_PATTERN.writeln();
                 }
             } while (!error && i < patternString.length());
         } while (error);
@@ -49,7 +49,7 @@ public class PatternCodePeg {
             patternString = console.readString(Message.ENTER_PATTERN.toString());
             error = patternString.length() != Row.SIZE;
             if(error) {
-                Error.BAD_LONG_CODE_PEG_PATTERN.writeln();
+                com.upm.mastermind.model.Error.BAD_LONG_CODE_PEG_PATTERN.writeln();
             }
         } while (error);
         return patternString.toUpperCase();

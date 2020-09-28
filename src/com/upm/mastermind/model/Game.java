@@ -1,4 +1,4 @@
-package com.upm.mastermind;
+package com.upm.mastermind.model;
 
 public class Game {
     private Board board;

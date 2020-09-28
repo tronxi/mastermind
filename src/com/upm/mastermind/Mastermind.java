@@ -1,21 +1,24 @@
 package com.upm.mastermind;
 
+import com.upm.mastermind.controller.Controller;
+import com.upm.mastermind.controller.Logic;
+
 public class Mastermind {
 
     private void play() {
         Logic logic = new Logic();
-        Action action;
+        Controller controller;
         do {
-            action = logic.getAction();
+            controller = logic.getAction();
 
-            if(action != null) {
-                action.execute();
+            if (controller != null) {
+                controller.execute();
             }
 
-        } while (action != null);
+        } while (controller != null);
     }
 
     public static void main(String[] args) {
-	    new Mastermind().play();
+        new Mastermind().play();
     }
 }

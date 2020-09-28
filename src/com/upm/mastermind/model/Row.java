@@ -1,4 +1,4 @@
-package com.upm.mastermind;
+package com.upm.mastermind.model;
 
 public class Row {
 
@@ -11,7 +11,7 @@ public class Row {
         this.patternKeyPeg = new PatternKeyPeg();
     }
 
-    public boolean isWinnerRow(PatternCodePeg secret){
+    public boolean isWinnerRow(PatternCodePeg secret) {
         assert secret != null;
         return patternCodePeg.equals(secret);
     }
@@ -31,5 +31,14 @@ public class Row {
         Message.ARROW_SEPARATOR.write();
         this.patternKeyPeg.write();
         Message.NEW_LINE.writeln();
+    }
+
+    //methods for view
+    public PatternCodePeg getPatternCodePeg() {
+        return patternCodePeg;
+    }
+
+    public PatternKeyPeg getPatternKeyPeg() {
+        return patternKeyPeg;
     }
 }

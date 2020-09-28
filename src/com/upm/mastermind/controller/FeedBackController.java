@@ -1,8 +1,12 @@
-package com.upm.mastermind;
+package com.upm.mastermind.controller;
 
-public class FeedBackAction extends Action {
+import com.upm.mastermind.model.Game;
+import com.upm.mastermind.model.State;
+import com.upm.mastermind.view.BoardView;
 
-    public FeedBackAction(Game game) {
+public class FeedBackController extends Controller {
+
+    public FeedBackController(Game game) {
         super(game);
     }
 
@@ -10,9 +14,9 @@ public class FeedBackAction extends Action {
     public void execute() {
         assert this.getState() == State.PENDING_FEEDBACK;
         this.getBoard().calculateFeedBack();
-        this.getBoard().write();
+        new BoardView(getBoard()).write();
         if (getBoard().playerWin())
-             this.setState(State.WON);
+            this.setState(State.WON);
         else if (getBoard().ifFinished())
             this.setState(State.LOST);
         else {

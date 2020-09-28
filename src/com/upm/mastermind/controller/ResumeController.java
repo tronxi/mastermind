@@ -1,10 +1,14 @@
-package com.upm.mastermind;
+package com.upm.mastermind.controller;
 
+import com.upm.mastermind.model.Board;
+import com.upm.mastermind.model.Game;
+import com.upm.mastermind.model.Message;
+import com.upm.mastermind.model.State;
 import com.upm.utils.YesNoDialog;
 
-public class ResumeAction extends Action {
+public class ResumeController extends Controller {
 
-    public ResumeAction(Game game) {
+    public ResumeController(Game game) {
         super(game);
     }
 

@@ -1,9 +1,9 @@
-package com.upm.mastermind;
+package com.upm.mastermind.model;
 
 import com.upm.utils.Console;
 
 public class PatternKeyPeg {
-    private final KeyPeg [] pattern;
+    private final KeyPeg[] pattern;
     private int actualFeedBack;
 
     public PatternKeyPeg() {
@@ -32,7 +32,7 @@ public class PatternKeyPeg {
                 countOccurrences(KeyPeg.BLACK), countOccurrences(KeyPeg.WHITE)));
     }
 
-    private int countOccurrences(KeyPeg keyPeg) {
+    public int countOccurrences(KeyPeg keyPeg) {
         int occurrences = 0;
         for(KeyPeg kp : pattern) {
             if(kp != null && kp.equals(keyPeg)) {

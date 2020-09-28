@@ -1,4 +1,4 @@
-package com.upm.mastermind;
+package com.upm.mastermind.model;
 
 public enum  KeyPeg {
     WHITE,
