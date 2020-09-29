@@ -3,6 +3,7 @@ package com.upm.mastermind.view;
 import com.upm.utils.Console;
 
 public enum Message {
+    TITTLE("MASTERMIND"),
     ATTEMPTS("%d attempt(s):"),
     SEPARATOR("-------------"),
     NEW_LINE("\n"),

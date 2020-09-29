@@ -14,7 +14,7 @@ public class PatternCodePegView {
     public String getMessage() {
         StringBuilder stringBuilder = new StringBuilder();
         for (CodePeg codePeg : patternCodePeg.getPattern()) {
-            stringBuilder.append(codePeg.toString());
+            stringBuilder.append(codePeg.getInitial());
         }
         return stringBuilder.toString();
     }

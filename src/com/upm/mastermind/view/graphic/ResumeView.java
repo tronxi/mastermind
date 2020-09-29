@@ -6,9 +6,8 @@ import com.upm.mastermind.view.Message;
 
 import javax.swing.*;
 
-public class ResumeView extends com.upm.mastermind.view.ResumeView {
+public class ResumeView {
 
-    @Override
     public void interact(ResumeController resumeController) {
         boolean next = next(resumeController.getState());
         resumeController.resume(next);
@@ -30,7 +29,7 @@ public class ResumeView extends com.upm.mastermind.view.ResumeView {
                 null,
                 message + Message.NEW_LINE.toString() +
                         Message.RESUME.toString(),
-                "",
+                Message.TITTLE.toString(),
                 JOptionPane.YES_NO_OPTION) == 0;
     }
 }

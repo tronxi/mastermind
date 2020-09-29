@@ -5,9 +5,8 @@ import com.upm.mastermind.model.State;
 import com.upm.mastermind.view.Message;
 import com.upm.utils.YesNoDialog;
 
-public class ResumeView extends com.upm.mastermind.view.ResumeView {
+public class ResumeView {
 
-    @Override
     public void interact(ResumeController resumeController) {
         printState(resumeController.getState());
         resumeController.resume(isResumedGame());

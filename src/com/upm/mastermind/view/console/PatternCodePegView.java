@@ -14,7 +14,7 @@ public class PatternCodePegView {
 
     public void write() {
         for (CodePeg codePeg : patternCodePeg.getPattern()) {
-            Console.instance().write(codePeg.toString());
+            Console.instance().write(codePeg.getInitial());
         }
     }
 }

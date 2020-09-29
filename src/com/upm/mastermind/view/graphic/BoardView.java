@@ -14,7 +14,7 @@ public class BoardView {
     public String getMessage() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(String.format(Message.ATTEMPTS.toString(), board.getActualAttempt() + 1));
-        stringBuilder.append(Message.SECRET.toString() + Message.NEW_LINE.toString());
+        stringBuilder.append(Message.SECRET.toString()).append(Message.NEW_LINE.toString());
         for (int i = 0; i <= board.getActualAttempt(); i++) {
             stringBuilder.append(new RowView(board.getRow(i)).getMessage());
         }

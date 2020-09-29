@@ -8,9 +8,8 @@ import com.upm.mastermind.view.Error;
 import com.upm.mastermind.view.Message;
 import com.upm.utils.Console;
 
-public class PutPatternCodePegView extends com.upm.mastermind.view.PutPatternCodePegView {
+public class PutPatternCodePegView {
 
-    @Override
     public void interact(PutPatternCodePegController putPatternCodePegController) {
         putPatternCodePegController.put(read());
     }
@@ -38,7 +37,7 @@ public class PutPatternCodePegView extends com.upm.mastermind.view.PutPatternCod
             int i = 0;
             do {
                 if (CodePeg.containInitial(patternString.charAt(i))) {
-                    pattern[i] = CodePeg.valueOf(String.valueOf(patternString.charAt(i)));
+                    pattern[i] = CodePeg.getByInitial(String.valueOf(patternString.charAt(i)));
                     i++;
                 } else {
                     error = true;
@@ -60,6 +59,6 @@ public class PutPatternCodePegView extends com.upm.mastermind.view.PutPatternCod
                 Error.BAD_LONG_CODE_PEG_PATTERN.writeln();
             }
         } while (error);
-        return patternString.toUpperCase();
+        return patternString;
     }
 }
