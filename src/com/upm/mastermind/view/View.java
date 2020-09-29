@@ -10,10 +10,21 @@ public class View implements ControllerVisitor {
     private PutPatternCodePegView putPatternCodePegView;
 
     public View() {
-        feedBackView = new FeedBackView();
-        resumeView = new ResumeView();
-        makePatternCodePegView = new MakePatternCodePegView();
-        putPatternCodePegView = new PutPatternCodePegView();
+        graphic();
+    }
+
+    private void console() {
+        feedBackView = new com.upm.mastermind.view.console.FeedBackView();
+        resumeView = new com.upm.mastermind.view.console.ResumeView();
+        makePatternCodePegView = new com.upm.mastermind.view.console.MakePatternCodePegView();
+        putPatternCodePegView = new com.upm.mastermind.view.console.PutPatternCodePegView();
+    }
+
+    private void graphic() {
+        feedBackView = new com.upm.mastermind.view.graphic.FeedBackView();
+        resumeView = new com.upm.mastermind.view.graphic.ResumeView();
+        makePatternCodePegView = new com.upm.mastermind.view.graphic.MakePatternCodePegView();
+        putPatternCodePegView = new com.upm.mastermind.view.graphic.PutPatternCodePegView();
     }
 
     public void interact(Controller controller) {

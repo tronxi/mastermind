@@ -32,6 +32,7 @@ public enum Message {
         Console.instance().writeln(this.message);
     }
 
+
     @Override
     public String toString() {
         return this.message;

@@ -2,7 +2,6 @@ package com.upm.mastermind.controller;
 
 import com.upm.mastermind.model.Game;
 import com.upm.mastermind.model.State;
-import com.upm.mastermind.view.BoardView;
 
 public class FeedBackController extends Controller {
 

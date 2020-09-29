@@ -1,7 +1,8 @@
-package com.upm.mastermind.view;
+package com.upm.mastermind.view.console;
 
 import com.upm.mastermind.model.KeyPeg;
 import com.upm.mastermind.model.PatternKeyPeg;
+import com.upm.mastermind.view.Message;
 import com.upm.utils.Console;
 
 public class PatternKeyPegView {

@@ -1,7 +1,6 @@
 package com.upm.mastermind.controller;
 
 import com.upm.mastermind.model.Game;
-import com.upm.mastermind.view.BoardView;
 
 public class Logic {
 

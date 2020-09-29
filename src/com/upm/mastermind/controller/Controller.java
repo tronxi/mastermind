@@ -18,6 +18,7 @@ public abstract class Controller {
     }
 
     protected void setBoard(Board board) {
+        assert board != null;
         game.setBoard(board);
     }
 
@@ -26,6 +27,7 @@ public abstract class Controller {
     }
 
     protected void setState(State state) {
+        assert state != null;
         game.setState(state);
     }
 

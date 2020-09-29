@@ -1,6 +1,7 @@
-package com.upm.mastermind.view;
+package com.upm.mastermind.view.console;
 
 import com.upm.mastermind.model.Row;
+import com.upm.mastermind.view.Message;
 
 public class RowView {
 

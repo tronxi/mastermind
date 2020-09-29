@@ -1,4 +1,4 @@
-package com.upm.mastermind.view;
+package com.upm.mastermind.view.console;
 
 import com.upm.mastermind.model.CodePeg;
 import com.upm.mastermind.model.PatternCodePeg;

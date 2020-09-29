@@ -1,6 +1,7 @@
-package com.upm.mastermind.view;
+package com.upm.mastermind.view.console;
 
 import com.upm.mastermind.model.Board;
+import com.upm.mastermind.view.Message;
 import com.upm.utils.Console;
 
 public class BoardView {
