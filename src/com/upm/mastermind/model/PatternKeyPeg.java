@@ -1,7 +1,5 @@
 package com.upm.mastermind.model;
 
-import com.upm.utils.Console;
-
 public class PatternKeyPeg {
     private final KeyPeg[] pattern;
     private int actualFeedBack;
@@ -25,11 +23,6 @@ public class PatternKeyPeg {
                 }
             }
         }
-    }
-
-    public void write() {
-        Console.instance().write(String.format(Message.KEY_PEG_OCCURRENCES.toString(),
-                countOccurrences(KeyPeg.BLACK), countOccurrences(KeyPeg.WHITE)));
     }
 
     public int countOccurrences(KeyPeg keyPeg) {

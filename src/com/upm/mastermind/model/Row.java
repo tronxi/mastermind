@@ -26,14 +26,6 @@ public class Row {
         patternKeyPeg.calculateFeedBack(secret, this.patternCodePeg);
     }
 
-    public void write() {
-        this.patternCodePeg.write();
-        Message.ARROW_SEPARATOR.write();
-        this.patternKeyPeg.write();
-        Message.NEW_LINE.writeln();
-    }
-
-    //methods for view
     public PatternCodePeg getPatternCodePeg() {
         return patternCodePeg;
     }

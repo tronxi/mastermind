@@ -1,7 +1,6 @@
 package com.upm.mastermind.view;
 
 import com.upm.mastermind.model.KeyPeg;
-import com.upm.mastermind.model.Message;
 import com.upm.mastermind.model.PatternKeyPeg;
 import com.upm.utils.Console;
 

@@ -1,7 +1,5 @@
 package com.upm.mastermind.model;
 
-import com.upm.utils.Console;
-
 public class Board {
 
     private final static int MAX_ATTEMPTS = 10;
@@ -42,17 +40,6 @@ public class Board {
         attempts[actualAttempt].setPatternCodePeg(patternCodePeg);
     }
 
-    public void write() {
-        Console.instance().writeln(String.format(Message.ATTEMPTS.toString(), actualAttempt + 1));
-        secret.write();
-        Message.SECRET.writeln();
-        for (int i = 0; i <= actualAttempt; i++) {
-            attempts[i].write();
-        }
-        Message.SEPARATOR.writeln();
-    }
-
-    //methods for view
     public int getActualAttempt() {
         return actualAttempt;
     }

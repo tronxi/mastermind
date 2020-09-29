@@ -11,10 +11,16 @@ public class FeedBackController extends Controller {
     }
 
     @Override
-    public void execute() {
+    public void accept(ControllerVisitor controllerVisitor) {
+        controllerVisitor.visit(this);
+    }
+
+    public void calculateFeedBack() {
         assert this.getState() == State.PENDING_FEEDBACK;
         this.getBoard().calculateFeedBack();
-        new BoardView(getBoard()).write();
+    }
+
+    public void calculateState() {
         if (getBoard().playerWin())
             this.setState(State.WON);
         else if (getBoard().ifFinished())

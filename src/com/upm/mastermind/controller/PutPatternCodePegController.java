@@ -11,10 +11,12 @@ public class PutPatternCodePegController extends Controller {
     }
 
     @Override
-    public void execute() {
+    public void accept(ControllerVisitor controllerVisitor) {
+        controllerVisitor.visit(this);
+    }
+
+    public void put(PatternCodePeg patternCodePeg) {
         assert this.getState() == State.IN_GAME;
-        PatternCodePeg patternCodePeg = new PatternCodePeg();
-        patternCodePeg.read();
         this.getBoard().putPatternCodePeg(patternCodePeg);
         this.setState(State.PENDING_FEEDBACK);
     }

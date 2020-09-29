@@ -21,7 +21,7 @@ public abstract class Controller {
         game.setBoard(board);
     }
 
-    protected State getState() {
+    public State getState() {
         return game.getState();
     }
 
@@ -29,5 +29,6 @@ public abstract class Controller {
         game.setState(state);
     }
 
-    public abstract void execute();
+    public abstract void accept(ControllerVisitor controllerVisitor);
+
 }

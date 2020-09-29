@@ -10,6 +10,10 @@ public class MakePatternCodePegController extends Controller {
     }
 
     @Override
+    public void accept(ControllerVisitor controllerVisitor) {
+        controllerVisitor.visit(this);
+    }
+
     public void execute() {
         assert this.getState() == State.INITIAL;
         this.getBoard().generateSecret();

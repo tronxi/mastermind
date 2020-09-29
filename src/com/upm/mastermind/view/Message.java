@@ -1,4 +1,4 @@
-package com.upm.mastermind.model;
+package com.upm.mastermind.view;
 
 import com.upm.utils.Console;
 
