@@ -14,7 +14,7 @@ public class MakePatternCodePegController extends Controller {
         controllerVisitor.visit(this);
     }
 
-    public void execute() {
+    public void make() {
         assert this.getState() == State.INITIAL;
         this.getBoard().generateSecret();
         this.setState(State.IN_GAME);

@@ -8,12 +8,13 @@ public enum Error {
 
 	private String message;
 
-	public String getMessage() {
-		return message;
-	}
-
 	Error(String message){
 		this.message = message;
+	}
+
+	@Override
+	public String toString() {
+		return message;
 	}
 
 }

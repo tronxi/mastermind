@@ -33,14 +33,19 @@ public class PatternCodePeg {
         } while (isRepeated());
     }
 
+    public boolean isEqualInPosition(PatternCodePeg patternCodePeg, int position) {
+        return pattern[position] == patternCodePeg.pattern[position];
+    }
+
     public CodePeg[] getPattern() {
         return this.pattern;
     }
 
-    public boolean contain(CodePeg codePeg) {
-        assert codePeg != null;
+    public boolean containByPosition(PatternCodePeg patternCodePeg, int position) {
+        assert patternCodePeg != null;
+        assert position >= 0 && position < Row.SIZE;
         for(CodePeg cp : pattern) {
-            if (cp.equals(codePeg)) {
+            if (cp.equals(patternCodePeg.pattern[position])) {
                 return true;
             }
         }

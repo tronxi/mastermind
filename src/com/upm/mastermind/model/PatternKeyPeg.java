@@ -12,10 +12,10 @@ public class PatternKeyPeg {
         assert secret != null;
         assert actual != null;
         for (int i = 0; i < Row.SIZE; i++) {
-            if(secret.getPattern()[i].equals(actual.getPattern()[i])) {
+            if(secret.isEqualInPosition(actual, i)) {
                 pattern[i] = KeyPeg.BLACK;
             } else {
-                if(secret.contain(actual.getPattern()[i])) {
+                if(secret.containByPosition(actual, i)) {
                     pattern[i] = KeyPeg.WHITE;
                 }
             }
