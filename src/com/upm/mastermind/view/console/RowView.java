@@ -2,6 +2,7 @@ package com.upm.mastermind.view.console;
 
 import com.upm.mastermind.model.Row;
 import com.upm.mastermind.view.Message;
+import com.upm.utils.Console;
 
 public class RowView {
 
@@ -12,9 +13,10 @@ public class RowView {
     }
 
     public void write() {
+        Console console = Console.instance();
         new PatternCodePegView(row.getPatternCodePeg()).write();
-        Message.ARROW_SEPARATOR.write();
+        console.write(Message.ARROW_SEPARATOR.toString());
         new PatternKeyPegView(row.getPatternKeyPeg()).write();
-        Message.NEW_LINE.writeln();
+        console.write(Message.NEW_LINE.toString());
     }
 }

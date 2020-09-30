@@ -2,8 +2,7 @@ package com.upm.mastermind.view.graphic;
 
 import com.upm.mastermind.controller.FeedBackController;
 import com.upm.mastermind.view.Message;
-
-import javax.swing.*;
+import com.upm.utils.GraphicDialog;
 
 public class FeedBackView {
 
@@ -14,7 +13,6 @@ public class FeedBackView {
     }
 
     private void showDialog(String message) {
-        JOptionPane.showMessageDialog(null, message, Message.TITTLE.toString(), JOptionPane.INFORMATION_MESSAGE);
-
+        GraphicDialog.getInstance().info(Message.TITTLE.toString(), message);
     }
 }

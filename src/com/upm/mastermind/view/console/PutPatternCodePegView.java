@@ -22,7 +22,7 @@ public class PutPatternCodePegView {
             patternCodePeg = new PatternCodePeg(codePegs);
             error = patternCodePeg.isRepeated();
             if(error) {
-                Error.REPEATED_CODE_PEG_PATTERN.writeln();
+                Console.instance().writeln(Error.REPEATED_CODE_PEG_PATTERN.toString());
             }
         } while (error);
         return patternCodePeg;
@@ -41,7 +41,7 @@ public class PutPatternCodePegView {
                     i++;
                 } else {
                     error = true;
-                    Error.BAD_COMBINATION_CODE_PEG_PATTERN.writeln();
+                    Console.instance().writeln(Error.BAD_COMBINATION_CODE_PEG_PATTERN.toString());
                 }
             } while (!error && i < patternString.length());
         } while (error);
@@ -56,7 +56,7 @@ public class PutPatternCodePegView {
             patternString = console.readString(Message.ENTER_PATTERN.toString());
             error = patternString.length() != Row.SIZE;
             if(error) {
-                Error.BAD_LONG_CODE_PEG_PATTERN.writeln();
+                console.writeln(Error.BAD_LONG_CODE_PEG_PATTERN.toString());
             }
         } while (error);
         return patternString;

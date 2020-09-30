@@ -3,6 +3,7 @@ package com.upm.mastermind.view.console;
 import com.upm.mastermind.controller.ResumeController;
 import com.upm.mastermind.model.State;
 import com.upm.mastermind.view.Message;
+import com.upm.utils.Console;
 import com.upm.utils.YesNoDialog;
 
 public class ResumeView {
@@ -13,12 +14,13 @@ public class ResumeView {
     }
 
     private void printState(State state) {
+        Console console = Console.instance();
         switch (state) {
             case WON:
-                Message.PLAYER_WIN.writeln();
+                console.writeln(Message.PLAYER_WIN.toString());
                 break;
             case LOST:
-                Message.PLAYER_LOSE.writeln();
+                console.writeln(Message.PLAYER_LOSE.toString());
         }
     }
 

@@ -28,7 +28,6 @@ public class Board {
 
     public void generateSecret() {
         secret.random();
-        System.out.println(secret);
     }
 
     public void calculateFeedBack() {

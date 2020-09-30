@@ -1,7 +1,5 @@
 package com.upm.mastermind.view;
 
-import com.upm.utils.Console;
-
 public enum Message {
     TITTLE("MASTERMIND"),
     ATTEMPTS("%d attempt(s):"),
@@ -23,14 +21,6 @@ public enum Message {
 
     private Message(String message) {
         this.message = message;
-    }
-
-    public void write() {
-        Console.instance().write(this.message);
-    }
-
-    public void writeln() {
-        Console.instance().writeln(this.message);
     }
 
 

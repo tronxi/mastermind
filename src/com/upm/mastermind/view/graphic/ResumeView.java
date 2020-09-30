@@ -3,8 +3,7 @@ package com.upm.mastermind.view.graphic;
 import com.upm.mastermind.controller.ResumeController;
 import com.upm.mastermind.model.State;
 import com.upm.mastermind.view.Message;
-
-import javax.swing.*;
+import com.upm.utils.GraphicDialog;
 
 public class ResumeView {
 
@@ -25,11 +24,8 @@ public class ResumeView {
     }
 
     private boolean confirmDialog(Message message) {
-        return JOptionPane.showConfirmDialog(
-                null,
-                message + Message.NEW_LINE.toString() +
-                        Message.RESUME.toString(),
-                Message.TITTLE.toString(),
-                JOptionPane.YES_NO_OPTION) == 0;
+        String completeMessage = message + Message.NEW_LINE.toString() +
+                Message.RESUME.toString();
+        return GraphicDialog.getInstance().confirm(Message.TITTLE.toString(), completeMessage);
     }
 }

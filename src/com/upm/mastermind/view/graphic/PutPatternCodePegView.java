@@ -6,9 +6,7 @@ import com.upm.mastermind.model.PatternCodePeg;
 import com.upm.mastermind.model.Row;
 import com.upm.mastermind.view.Error;
 import com.upm.mastermind.view.Message;
-import com.upm.utils.ErrorGraphicDialog;
-
-import javax.swing.*;
+import com.upm.utils.GraphicDialog;
 
 public class PutPatternCodePegView {
 
@@ -24,7 +22,7 @@ public class PutPatternCodePegView {
             patternCodePeg = new PatternCodePeg(codePegs);
             error = patternCodePeg.isRepeated();
             if(error) {
-                new ErrorGraphicDialog().show(Error.REPEATED_CODE_PEG_PATTERN.getMessage());
+                GraphicDialog.getInstance().error(Error.REPEATED_CODE_PEG_PATTERN.getMessage());
             }
         } while (error);
         return patternCodePeg;
@@ -43,7 +41,7 @@ public class PutPatternCodePegView {
                     i++;
                 } else {
                     error = true;
-                    new ErrorGraphicDialog().show(Error.BAD_COMBINATION_CODE_PEG_PATTERN.getMessage());
+                    GraphicDialog.getInstance().error(Error.BAD_COMBINATION_CODE_PEG_PATTERN.getMessage());
                 }
             } while (!error && i < patternString.length());
         } while (error);
@@ -54,10 +52,10 @@ public class PutPatternCodePegView {
         String patternString;
         boolean error;
         do {
-            patternString = JOptionPane.showInputDialog(null,Message.ENTER_PATTERN, Message.TITTLE.toString(), JOptionPane.INFORMATION_MESSAGE);
+            patternString = GraphicDialog.getInstance().input(Message.TITTLE.toString(), Message.ENTER_PATTERN.toString());
             error = patternString.length() != Row.SIZE;
             if(error) {
-                new ErrorGraphicDialog().show(Error.BAD_LONG_CODE_PEG_PATTERN.getMessage());
+                GraphicDialog.getInstance().error(Error.BAD_LONG_CODE_PEG_PATTERN.getMessage());
             }
         } while (error);
         return patternString;

@@ -13,11 +13,12 @@ public class BoardView {
     }
 
     public void write() {
-        Console.instance().writeln(String.format(Message.ATTEMPTS.toString(), board.getActualAttempt() + 1));
-        Message.SECRET.writeln();
+        Console console = Console.instance();
+        console.writeln(String.format(Message.ATTEMPTS.toString(), board.getActualAttempt() + 1));
+        console.writeln(Message.SECRET.toString());
         for (int i = 0; i <= board.getActualAttempt(); i++) {
             new RowView(board.getRow(i)).write();
         }
-        Message.SEPARATOR.writeln();
+        console.writeln(Message.SEPARATOR.toString());
     }
 }
