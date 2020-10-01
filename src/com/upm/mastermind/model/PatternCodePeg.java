@@ -14,7 +14,7 @@ public class PatternCodePeg {
         this.pattern = pattern;
     }
 
-    public boolean isRepeated() {
+    public boolean containRepetitions() {
         for (int i = 0; i < Row.SIZE; i++) {
             for (int j = 0; j < Row.SIZE; j++) {
                 if (i != j && pattern[i].equals(pattern[j])) {
@@ -30,7 +30,7 @@ public class PatternCodePeg {
             for (int i = 0; i < Row.SIZE; i++) {
                 this.pattern[i] = CodePeg.random();
             }
-        } while (isRepeated());
+        } while (containRepetitions());
     }
 
     public boolean isEqualInPosition(PatternCodePeg patternCodePeg, int position) {

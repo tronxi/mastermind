@@ -17,7 +17,7 @@ public abstract class PutPatternCodePegView {
         do {
             CodePeg[] codePegs = readValidCombination();
             patternCodePeg = new PatternCodePeg(codePegs);
-            error = patternCodePeg.isRepeated();
+            error = patternCodePeg.containRepetitions();
             if(error) {
                 showError(Error.REPEATED_CODE_PEG_PATTERN);
             }
